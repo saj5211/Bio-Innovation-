@@ -14,6 +14,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Media.SpeechRecognition;
+using Windows.Storage;
+using System.Diagnostics;
+using Windows.UI.Popups;
 
 namespace Custom_Cortana_Command
 {
@@ -80,7 +84,10 @@ namespace Custom_Cortana_Command
             // Ensure the current window is active
             Window.Current.Activate();
         }
-
+        try{
+        
+            StorageFile vcd = await Package.Current.InstalledLocation.GetFileAsync("Custom_Commands.xml");
+        }
         /// <summary>
         /// Invoked when Navigation to a certain page fails
         /// </summary>

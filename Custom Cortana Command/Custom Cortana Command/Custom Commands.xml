@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<VoiceCommands xmlns =" http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="CustomCommandSet">
+    <CommandPrefix> Listen Up</CommandPrefix>
+    <Example> I am in pain.</Example>
+    <Command Name="Pain">
+      <Example>I am in pain, I need a massage, help me</Example>
+      <ListenFor>
+        Pain
+      </ListenFor>
+      <ListenFor>
+        Hip Pain
+      </ListenFor>
+      <ListenFor>
+        Pain on Left Side
+      </ListenFor>
+      <ListenFor>
+        Pain on Right Side
+      </ListenFor>
+
+      <Feedback>I will start your massage</Feedback>
+
+      <Navigate></Navigate>
+    </Command>
+  </CommandSet>
+  
+  
+</VoiceCommands>
