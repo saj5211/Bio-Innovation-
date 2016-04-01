@@ -1,26 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Windows.Media.SpeechRecognition;
-using Windows.Storage;
-using System.Diagnostics;
-using Windows.UI.Popups;
 
-namespace Custom_Cortana_Command
+using Windows.Media.SpeechRecognition;
+using Custom_Cortana_Command;
+
+namespace CustomCortanaCommands
 {
+        
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
@@ -37,6 +27,11 @@ namespace Custom_Cortana_Command
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+        }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -82,18 +77,19 @@ namespace Custom_Cortana_Command
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
             }
             // Ensure the current window is active
+
             Window.Current.Activate();
+
             Functions.RegisterVCD();
         }
-
 
         protected override void OnActivated(IActivatedEventArgs args)
         {
             base.OnActivated(args);
 
-            if(args.Kind == ActivationKind.VoiceCommand)
+            if (args.Kind == ActivationKind.VoiceCommand)
             {
-                Functions.Runcommand(args as VoiceCommandActivatedEventArgs);
+                Functions.RunCommand(args as VoiceCommandActivatedEventArgs);
             }
         }
 
