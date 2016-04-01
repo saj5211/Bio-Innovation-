@@ -14,7 +14,7 @@
 
 
     <Command Name="Moving">
-      <Example> need help moving. hi </Example>
+      <Example> need help moving. hi my name is sajal and im gay </Example>
       <ListenFor> Moving </ListenFor>
       <Feedback> Helping you move </Feedback>
       <Navigate/>
@@ -22,4 +22,4 @@
   </CommandSet>
   
   
-</VoiceCommands>
+</VoiceCommands>g
