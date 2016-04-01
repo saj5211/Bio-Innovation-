@@ -83,11 +83,20 @@ namespace Custom_Cortana_Command
             }
             // Ensure the current window is active
             Window.Current.Activate();
+            Functions.RegisterVCD();
         }
-        try{
-        
-            StorageFile vcd = await Package.Current.InstalledLocation.GetFileAsync("Custom_Commands.xml");
+
+
+        protected override void OnActivated(IActivatedEventArgs args)
+        {
+            base.OnActivated(args);
+
+            if(args.Kind == ActivationKind.VoiceCommand)
+            {
+                Functions.Runcommand(args as VoiceCommandActivatedEventArgs);
+            }
         }
+
         /// <summary>
         /// Invoked when Navigation to a certain page fails
         /// </summary>
