@@ -14,7 +14,7 @@
 
 
     <Command Name="Moving">
-      <Example> need help moving. </Example>
+      <Example> need help moving. hi </Example>
       <ListenFor> Moving </ListenFor>
       <Feedback> Helping you move </Feedback>
       <Navigate/>
