@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom Cortana Command", "Custom Cortana Command\Custom Cortana Command.csproj", "{B69468FA-A58D-414C-A345-4E85D5897A16}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{676BBEE1-7406-4FCB-BA8E-3078B2AC83C3}"
+	ProjectSection(SolutionItems) = preProject
+		Custom Cortana Command\Custom Commands.xml = Custom Cortana Command\Custom Commands.xml
+		Custom Cortana Command\Functions.cs = Custom Cortana Command\Functions.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM

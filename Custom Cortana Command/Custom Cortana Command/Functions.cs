@@ -13,7 +13,7 @@ using Windows.ApplicationModel.Activation;
 namespace CustomCortanaCommands
 {
 
-    class CortanaFunctions
+    class Functions
     {
         
         private readonly static IReadOnlyDictionary<string, Delegate> vcdLookup = new Dictionary<string, Delegate>{
