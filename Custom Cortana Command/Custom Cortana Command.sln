@@ -5,22 +5,19 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom Cortana Command", "Custom Cortana Command\Custom Cortana Command.csproj", "{B69468FA-A58D-414C-A345-4E85D5897A16}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{676BBEE1-7406-4FCB-BA8E-3078B2AC83C3}"
-	ProjectSection(SolutionItems) = preProject
-		Custom Cortana Command\Custom Commands.xml = Custom Cortana Command\Custom Commands.xml
-		Custom Cortana Command\Functions.cs = Custom Cortana Command\Functions.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|ARM = Release|ARM
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B69468FA-A58D-414C-A345-4E85D5897A16}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{B69468FA-A58D-414C-A345-4E85D5897A16}.Debug|ARM.ActiveCfg = Debug|ARM
 		{B69468FA-A58D-414C-A345-4E85D5897A16}.Debug|ARM.Build.0 = Debug|ARM
 		{B69468FA-A58D-414C-A345-4E85D5897A16}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -30,6 +27,7 @@ Global
 		{B69468FA-A58D-414C-A345-4E85D5897A16}.Debug|x86.ActiveCfg = Debug|x86
 		{B69468FA-A58D-414C-A345-4E85D5897A16}.Debug|x86.Build.0 = Debug|x86
 		{B69468FA-A58D-414C-A345-4E85D5897A16}.Debug|x86.Deploy.0 = Debug|x86
+		{B69468FA-A58D-414C-A345-4E85D5897A16}.Release|Any CPU.ActiveCfg = Release|x86
 		{B69468FA-A58D-414C-A345-4E85D5897A16}.Release|ARM.ActiveCfg = Release|ARM
 		{B69468FA-A58D-414C-A345-4E85D5897A16}.Release|ARM.Build.0 = Release|ARM
 		{B69468FA-A58D-414C-A345-4E85D5897A16}.Release|ARM.Deploy.0 = Release|ARM

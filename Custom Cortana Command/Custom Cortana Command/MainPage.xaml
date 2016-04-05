@@ -8,6 +8,8 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="oneEighty" Content="180" HorizontalAlignment="Left" Margin="95,79,0,415" VerticalAlignment="Stretch" Width="196" Background="Red" BorderBrush="Red" Foreground="White" FontFamily="Imprint MT Shadow" FontSize="64" Click="onButtonClickOneEighty" IsEnabled="False"/>
+        <Button x:Name="ninety" Content="90" HorizontalAlignment="Left" Margin="95,347,0,147" VerticalAlignment="Stretch" Width="196" Background="#FF00FF15" BorderBrush="#FF00FF31" Foreground="White" FontFamily="Imprint MT Shadow" FontSize="64" Click="onButtonClickNinety" IsEnabled="False" />
 
     </Grid>
 </Page>

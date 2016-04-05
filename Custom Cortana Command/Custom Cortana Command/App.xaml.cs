@@ -7,6 +7,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Storage;
 using Windows.Media.SpeechRecognition;
 using Custom_Cortana_Command;
+using System.Diagnostics;
 
 namespace CustomCortanaCommands
 {
@@ -27,9 +28,12 @@ namespace CustomCortanaCommands
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-        }
+        
+            Debug.WriteLine("App started");
+        
+    }
 
-        private void InitializeComponent()
+    private void InitializeComponent()
         {
             throw new NotImplementedException();
         }
@@ -80,7 +84,7 @@ namespace CustomCortanaCommands
 
             Window.Current.Activate();
 
-            Functions.RegisterVCD();
+           /* Functions.RegisterVCD();
         }
 
         protected override void OnActivated(IActivatedEventArgs args)
@@ -90,7 +94,7 @@ namespace CustomCortanaCommands
             if (args.Kind == ActivationKind.VoiceCommand)
             {
                 Functions.RunCommand(args as VoiceCommandActivatedEventArgs);
-            }
+            }*/
         }
 
         /// <summary>
