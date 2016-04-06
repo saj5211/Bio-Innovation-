@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="Commands">
+    <CommandPrefix>
+      Need Help
+    </CommandPrefix>
+      
+    <Example>
+      Massage please,
+      Me move please
+    </Example>
+  
+    <Command Name="Massage">
+      <Example>
+        Massage please
+      </Example>
+      <ListenFor>
+        Massage please
+      </ListenFor>
+      <Feedback>
+        Started your Massage
+      </Feedback>
+      <Navigate/>
+    </Command>
+  
+
+    <Command Name="Move">
+      <Example>
+         moving please
+      </Example>
+      <ListenFor>
+        moving please
+      </ListenFor>
+      <Feedback>
+        Helping you move now
+      </Feedback>
+      <Navigate/>
+    </Command>
+  </CommandSet>
+</VoiceCommands>
