@@ -1,0 +1,2 @@
+MainPackage=C:\Users\Saj\Documents\GitHub\Bio-Innovation-\Cortana_Arduino_Code\Cortana_Arduino_Code\bin\ARM\Debug\Cortana_Arduino_Code_1.1.3.0_ARM_Debug.appx
+SymbolPackage=C:\Users\Saj\Documents\GitHub\Bio-Innovation-\Cortana_Arduino_Code\Cortana_Arduino_Code\AppPackages\Cortana_Arduino_Code_1.1.3.0_Debug_Test\Cortana_Arduino_Code_1.1.3.0_ARM_Debug.appxsym

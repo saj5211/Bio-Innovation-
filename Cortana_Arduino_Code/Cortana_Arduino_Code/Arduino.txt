@@ -1,0 +1,58 @@
+#include <Servo.h>
+const int groundpin = 18;
+
+const int powerpin = 19;
+const int xpin = A3;
+const int ypin = A2;
+const int zpin = A1;
+
+Servo myservo;
+int position;
+
+int Rightx = 476;
+int Righty = 412;
+int Rightz = 534;
+
+int Sittingx = 412;
+int Sittingy = 495;
+int Sittingz = 454;
+
+int Standingx = 487;
+int Standingy = 411;
+int Standingz = 538;
+
+int Leftx = 521;
+int Lefty = 415;
+int Leftz = 543;
+
+void setup() {
+	Serial.begin(9600);
+	myservo.attach(9);
+	pinMode(groundpin, OUTPUT);
+	pinMode(powerpin, OUTPUT);
+	digitalWrite(groundpin, LOW);
+	digitalWrite(powerpin, HIGH);
+}
+
+void loop() {
+	int x = analogRead(xpin);
+	int y = analogRead(ypin);
+	int z = analogRead(zpin);
+
+	if (Rightx - x <= 5 || Rightx - x >= -5 && Righty - y <= 5 || Righty - y >= -5 && Rightz - z <= 5 || Rightz - z >= -5) { //Right
+		position = 180;
+	}
+	else if (Leftx - x <= 5 || Leftx - x >= -5 && Lefty - y <= 5 || Lefty - y >= -5 && Leftz - z <= 5 || Leftz - z >= -5) { //Left
+		position = 90;
+	}
+	else if (Standingx - x <= 5 || Standingx - x >= -5 && Standingy - y <= 5 || Standingy - y >= -5 && Standingz - z <= 5 || Standingz - z >= -5) { //Standing
+		position = 45;
+	}
+	else if (Sittingx - x <= 5 || Sittingx - x >= -5 && Sittingy - y <= 5 || Sittingy - y >= -5 && Sittingz - z <= 5 || Sittingz - z >= -5) { //Sitting
+		position = 135;
+
+	}
+	myservo.write(position);
+
+	delay(100);
+}

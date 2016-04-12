@@ -12,10 +12,19 @@
   
     <Command Name="Massage">
       <Example>
-        Massage please
+        I am in pain
       </Example>
       <ListenFor>
+        I am in pain
+      </ListenFor>
+      <ListenFor>
         Massage please
+      </ListenFor>
+      <ListenFor>
+        I'm in pain 
+      </ListenFor>
+      <ListenFor>
+        I have pain in my thighs
       </ListenFor>
       <Feedback>
         Started your Massage
@@ -30,6 +39,12 @@
       </Example>
       <ListenFor>
         moving please
+      </ListenFor>
+      <ListenFor>
+        I can not move
+      </ListenFor>
+      <ListenFor>
+        I can't move
       </ListenFor>
       <Feedback>
         Helping you move now

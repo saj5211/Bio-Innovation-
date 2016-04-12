@@ -9,30 +9,28 @@ using Windows.ApplicationModel.VoiceCommands;
 using Windows.System;
 using Windows.Media.SpeechRecognition;
 using Windows.ApplicationModel.Activation;
+using System.Diagnostics;
 
 
 namespace Cortana_Arduino_Code
 {
     class Functions
     {
+         
         private readonly static IReadOnlyDictionary<string, Delegate> vcdLookup = new Dictionary<string, Delegate>{
 
-           
+
             {"Massage", (Action)(async () => {
-               Uri website = new Uri(@"http://www.apple.com/");
-                 await Launcher.LaunchUriAsync(website);
-                
+               StorageFile file = await Package.Current.InstalledLocation.GetFileAsync(@"Arduino_Massage.ino");
+                await Launcher.LaunchFileAsync(file);
+
             })},
 
-            {"Move", (Action)(async () => {
-                 Uri website = new Uri(@"http://www.microsoft.com");
-                 await Launcher.LaunchUriAsync(website);
-             })},
+            {"Move", (Action)(async() => {
+                StorageFile file = await Package.Current.InstalledLocation.GetFileAsync(@"Arduino.ino");
+                await Launcher.LaunchFileAsync(file);
+            })},
         };
-
-        /*
-        Register Custom Cortana Commands from VCD file
-        */
         public static async void RegisterVCD()
         {
             StorageFile vcd = await Package.Current.InstalledLocation.GetFileAsync(
